@@ -1,0 +1,8 @@
+<div>
+	<ul class="collection">
+		<a ng-href="#!/device/{{n._id}}" ng-repeat='n in Devices' class="collection-item"><li> 
+			{{n.name}}
+			<i class="right">Last Update : {{n.last_heard|dateFr}}</i>
+		</li></a> 
+	</ul>
+</div>

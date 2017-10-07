@@ -1,0 +1,47 @@
+
+<i data-target='event' class="material-icons" modal>event</i>
+<i ng-click='light()' data-target='led' class="material-icons" modal>flare</i>
+<i ng-click='chart()' data-target='chart' class="material-icons" modal>insert_chart</i>
+<div class="myDevice" id="myDevice">
+	Mon objet est : <br>
+	<hr>
+	<span>Identifiant : </span> {{myDevice.id}} <br>
+	<span>Nom : </span> {{myDevice.name}} <br>
+	<hr>
+	<!-- <span>Dernière Applicatn :</span> {{myDevice.last_app}} <br> -->
+	<span>Dernière adresse IP : </span> {{myDevice.last_ip_address}} <br>
+	<hr>
+	<span>Id produit : </span> {{myDevice.product_id}} <br>
+	<span>Id plateforme : </span> {{myDevice.platform_id}} <br>
+	<hr>
+	<span>Connecté ? : </span> {{myDevice.connected}} <br>
+	<span>Cellular : </span> {{myDevice.cellular}} <br>
+	<span>Status : </span> {{myDevice.status}} <br>
+	<span>Notes : </span> {{myDevice.notes}} <br>
+	<hr>
+	<span>Dernière utilisation :</span> {{myDevice.last_heard|dateFr}} <br>
+<!-- 	<span>Build courant :</span> {{myDevice.current_build_target}}<br>
+	<span>Build par défaut :</span> {{myDevice.default_build_target}}<br> -->
+</div>
+
+<div class="modal" id="event">
+	<ul class="collection">
+		<li ng-repeat='event in myDeviceEvent' class="collection-item">
+			{{event.name}} : (<i>{{event._id}}</i>)<br>
+			Publie le : {{event.published|dateFr}} <br>
+			Data : {{event.data}}
+		</li>
+	</ul>
+</div>
+
+<div class="modal myDevice" id="led">
+	<span>Objet :</span> {{appareil}} <br>
+	{{switchLight}}
+</div>
+
+<div class="modal" id="chart">
+	<canvas id="line" class="chart chart-line" chart-data="data"
+	chart-labels="labels" chart-series="series" chart-options="options"
+	chart-dataset-override="datasetOverride" chart-click="onClick">
+	</canvas>
+</div>

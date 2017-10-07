@@ -1,0 +1,26 @@
+.bloc
+{
+	width:500px;
+	margin: auto;
+}
+
+div.myDevice
+{
+	padding:20px;
+	border:1px solid #cdcdcd;
+}
+
+div.myDevice span
+{
+	display: inline-block;
+	width: 170px;
+	background-color: #e0e0e0;
+	padding: 2px 0 2px 4px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+div.myDeviceEvent
+{
+	display: none;
+}
