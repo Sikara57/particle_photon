@@ -83,7 +83,7 @@ app.get('/liste/:id', function(req,res){
     });
 });
 
-particle.login({username:'sikara57@gmail.com',password:'zfgp64s3*'}).then(
+particle.login({username:'YOUR MAIL',password:'YOUR PASSWORD'}).then(
     function(data){
         token = data.body.access_token;
         console.log('Access Granted !');
